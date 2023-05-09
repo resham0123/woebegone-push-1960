@@ -5,10 +5,10 @@ import { Navigate } from 'react-router-dom';
 //import PrivateRoute from "../AllRoutes/PrivateRoute"
 export default function PrivateRoute({children}) {
 
-  const {isAuth,setIsAuth}=useContext(AuthContext);  
+  const {isAuth}=useContext(AuthContext);  
 
   if(!isAuth){
-     <Navigate to="/login"/>   
+    return <Navigate to="/login"/>   
   }
   return (
    
